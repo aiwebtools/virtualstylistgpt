@@ -55,23 +55,23 @@ const HeroSection = () => {
                   <div className="w-[80%] h-[80%] relative">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <img 
-                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=500&h=500&q=80" 
-                        alt="Virtual fashion try-on" 
+                        src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=80" 
+                        alt="Fashion model in stylish outfit" 
                         className="rounded-lg object-cover object-center animate-float shadow-lg shadow-cyberpunk-purple/20"
                       />
                     </div>
                     <div className="absolute -bottom-4 -right-4">
                       <img 
-                        src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=200&h=200&q=80" 
-                        alt="AI fashion technology" 
+                        src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
+                        alt="Man in stylish outfit" 
                         className="rounded-lg w-32 h-32 object-cover object-center animate-float shadow-lg shadow-cyberpunk-blue/20"
                         style={{animationDelay: "0.5s"}}
                       />
                     </div>
                     <div className="absolute -top-4 -left-4">
                       <img 
-                        src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=200&h=200&q=80" 
-                        alt="Fashion display" 
+                        src="https://images.unsplash.com/photo-1613850400813-03aebd08156d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
+                        alt="Woman with stylish hairstyle" 
                         className="rounded-lg w-24 h-24 object-cover object-center animate-float shadow-lg shadow-cyberpunk-pink/20"
                         style={{animationDelay: "1s"}}
                       />
