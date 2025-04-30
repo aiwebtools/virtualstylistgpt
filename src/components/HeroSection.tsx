@@ -70,7 +70,7 @@ const HeroSection = () => {
                     </div>
                     <div className="absolute -top-4 -left-4">
                       <img 
-                        src="https://images.unsplash.com/photo-1613850400813-03aebd08156d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
+                        src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
                         alt="Woman with stylish hairstyle" 
                         className="rounded-lg w-24 h-24 object-cover object-center animate-float shadow-lg shadow-cyberpunk-pink/20"
                         style={{animationDelay: "1s"}}
