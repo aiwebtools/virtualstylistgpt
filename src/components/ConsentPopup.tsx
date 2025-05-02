@@ -8,20 +8,24 @@ const ConsentPopup = () => {
   useEffect(() => {
     // Check if user has already agreed
     const hasAgreed = localStorage.getItem('consentAgreed');
+    
+    // Only show popup if user hasn't agreed yet
     if (!hasAgreed) {
-      // Show popup after a short delay
+      // Show popup after a short delay (only once)
       const timer = setTimeout(() => {
         setIsOpen(true);
       }, 1000);
+      
       return () => clearTimeout(timer);
     }
-  }, []);
+  }, []); // Empty dependency array ensures this only runs once on mount
 
   const handleAgree = () => {
     localStorage.setItem('consentAgreed', 'true');
     setIsOpen(false);
   };
 
+  // Don't render anything if popup shouldn't be shown
   if (!isOpen) return null;
 
   return (

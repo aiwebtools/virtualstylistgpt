@@ -9,7 +9,6 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import FaqSection from '@/components/FaqSection';
 import DisclaimerSection from '@/components/DisclaimerSection';
 import CtaSection from '@/components/CtaSection';
-import ConsentPopup from '@/components/ConsentPopup';
 
 const Index = () => {
   useEffect(() => {
@@ -32,7 +31,6 @@ const Index = () => {
       </main>
       
       <Footer />
-      <ConsentPopup />
     </div>
   );
 };
