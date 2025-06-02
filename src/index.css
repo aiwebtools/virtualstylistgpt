@@ -48,15 +48,82 @@
     @apply bg-cyberpunk-dark text-foreground font-sans;
     background-color: #0B0E14;
     background-image: 
-      radial-gradient(circle at 25% 10%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 75% 30%, rgba(14, 165, 233, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 50% 80%, rgba(217, 70, 239, 0.15) 0%, transparent 50%);
-    background-size: 100% 100%;
+      radial-gradient(circle at 25% 10%, rgba(139, 92, 246, 0.25) 0%, transparent 60%),
+      radial-gradient(circle at 75% 30%, rgba(14, 165, 233, 0.25) 0%, transparent 60%),
+      radial-gradient(circle at 50% 80%, rgba(217, 70, 239, 0.25) 0%, transparent 60%),
+      radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 20% 70%, rgba(234, 179, 8, 0.15) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(139, 92, 246, 0.03) 0%, rgba(14, 165, 233, 0.03) 50%, rgba(217, 70, 239, 0.03) 100%);
+    background-size: 100% 100%, 120% 120%, 100% 100%, 80% 80%, 90% 90%, 100% 100%;
     background-attachment: fixed;
+    animation: divine-shimmer 20s ease-in-out infinite alternate;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  /* Enhanced text glow effects */
+  .bg-clip-text.text-transparent.bg-cyberpunk-gradient {
+    background-size: 200% 200%;
+    animation: divine-gradient-shift 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+  }
+}
+
+@keyframes divine-shimmer {
+  0% {
+    background-position: 0% 50%, 100% 50%, 50% 0%, 0% 100%, 100% 0%, 0% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 100%, 100% 0%, 0% 100%, 50% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 50% 0%, 0% 100%, 100% 0%, 100% 100%;
+  }
+}
+
+@keyframes divine-gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes celestial-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+}
+
+@keyframes divine-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: brightness(1.3) saturate(1.2);
+  }
+}
+
+@keyframes ethereal-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(14, 165, 233, 0.2), 0 0 60px rgba(217, 70, 239, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.5), 0 0 60px rgba(14, 165, 233, 0.3), 0 0 90px rgba(217, 70, 239, 0.2);
   }
 }
 
@@ -75,7 +142,9 @@
     bottom: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(to right, #8B5CF6, #0EA5E9, #D946EF);
+    background: linear-gradient(45deg, #8B5CF6, #0EA5E9, #D946EF, #0D9488, #EAB308);
+    background-size: 300% 300%;
+    animation: divine-gradient-shift 3s ease-in-out infinite;
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -83,11 +152,95 @@
   }
   
   .neo-blur {
-    @apply backdrop-blur-lg bg-black/30 border border-white/10;
+    @apply backdrop-blur-xl bg-black/40 border border-white/20;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   }
   
   .glass-card {
-    @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-lg;
+    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 2px 8px rgba(139, 92, 246, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .glass-card:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    box-shadow: 
+      0 12px 48px rgba(0, 0, 0, 0.4),
+      0 4px 16px rgba(139, 92, 246, 0.2),
+      0 2px 8px rgba(14, 165, 233, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  /* Enhanced container spacing */
+  .container {
+    @apply px-6 md:px-8 lg:px-12;
+  }
+
+  /* Divine section spacing */
+  section {
+    @apply py-20 md:py-24 lg:py-32;
+  }
+
+  /* Enhanced button effects */
+  .bg-cyberpunk-gradient {
+    background: linear-gradient(45deg, #8B5CF6, #0EA5E9, #D946EF);
+    background-size: 200% 200%;
+    animation: divine-gradient-shift 3s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-cyberpunk-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+  }
+
+  .bg-cyberpunk-gradient:hover::before {
+    left: 100%;
+  }
+
+  /* Enhanced text effects */
+  .text-3xl, .text-4xl {
+    @apply leading-tight tracking-tight;
+    letter-spacing: -0.02em;
+  }
+
+  .text-xl {
+    @apply leading-relaxed;
+    line-height: 1.75;
+  }
+
+  /* Divine spacing utilities */
+  .space-y-8 > * + * {
+    margin-top: 2.5rem;
+  }
+
+  .space-y-12 > * + * {
+    margin-top: 3.5rem;
+  }
+
+  .space-y-16 > * + * {
+    margin-top: 4.5rem;
+  }
+
+  /* Enhanced grid gaps */
+  .gap-8 {
+    gap: 2.5rem;
+  }
+
+  .gap-12 {
+    gap: 3.5rem;
   }
 }
 
@@ -98,4 +251,17 @@
 .scroll-hidden {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Divine enhancement animations */
+.animate-celestial-float {
+  animation: celestial-float 6s ease-in-out infinite;
+}
+
+.animate-divine-pulse {
+  animation: divine-pulse 3s ease-in-out infinite;
+}
+
+.animate-ethereal-glow {
+  animation: ethereal-glow 4s ease-in-out infinite;
 }
