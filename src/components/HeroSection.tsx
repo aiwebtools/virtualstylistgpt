@@ -11,6 +11,25 @@ const HeroSection = () => {
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center relative pt-20 pb-16">
+      {/* Enhanced Schema.org structured data for better SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Virtual Stylist GPT",
+          "description": "AI-powered fashion and hair visualization tool for virtual outfit try-ons and hairstyle experiments",
+          "url": "https://aiwebtools.lovable.app/",
+          "category": "AI Tools, Fashion Technology, Virtual Try-On",
+          "operatingSystem": "Web Browser",
+          "applicationCategory": "DesignApplication",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        })
+      }} />
+
       {/* Background animated circles */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-20 -left-20 w-60 h-60 rounded-full bg-cyberpunk-purple/20 filter blur-3xl"></div>
@@ -28,17 +47,17 @@ const HeroSection = () => {
               <br />
               in the Future of Fashion
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">
+            <h2 className="text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0 font-medium">
               Try on outfits, visualize new hairstyles, and transform your look virtually with our advanced AI stylist before making any real changes.
-            </p>
+            </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button asChild size="lg" className="rounded-full bg-cyberpunk-gradient hover:opacity-90">
-                <a href="https://chatgpt.com/g/g-68122f9753c48191a204f57f491ad2f3-virtual-stylist-gpt" target="_blank" rel="noopener noreferrer">
+                <a href="https://chatgpt.com/g/g-68122f9753c48191a204f57f491ad2f3-virtual-stylist-gpt" target="_blank" rel="noopener noreferrer" aria-label="Try Virtual Stylist GPT - AI Fashion Tool">
                   Try Virtual Stylist Now
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 hover:bg-white/10">
-                <a href="#how-it-works">
+                <a href="#how-it-works" aria-label="Learn more about AI fashion tools">
                   Learn More
                 </a>
               </Button>
@@ -56,24 +75,33 @@ const HeroSection = () => {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <img 
                         src="https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&h=500&q=80" 
-                        alt="Fashion model in stylish outfit" 
+                        alt="AI Fashion Model - Virtual Stylist GPT demonstration showing fashion visualization technology" 
                         className="rounded-lg object-cover object-center animate-float shadow-lg shadow-cyberpunk-purple/20"
+                        loading="eager"
+                        width="500"
+                        height="500"
                       />
                     </div>
                     <div className="absolute -bottom-4 -right-4">
                       <img 
                         src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
-                        alt="Man in stylish outfit" 
+                        alt="AI styling for men - Virtual outfit try-on demonstration" 
                         className="rounded-lg w-32 h-32 object-cover object-center animate-float shadow-lg shadow-cyberpunk-blue/20"
                         style={{animationDelay: "0.5s"}}
+                        loading="lazy"
+                        width="200"
+                        height="200"
                       />
                     </div>
                     <div className="absolute -top-4 -left-4">
                       <img 
                         src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" 
-                        alt="Woman with stylish hairstyle" 
+                        alt="AI hairstyle visualization - Virtual hair styling demonstration" 
                         className="rounded-lg w-24 h-24 object-cover object-center animate-float shadow-lg shadow-cyberpunk-pink/20"
                         style={{animationDelay: "1s"}}
+                        loading="lazy"
+                        width="200"
+                        height="200"
                       />
                     </div>
                   </div>
