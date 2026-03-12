@@ -22,7 +22,7 @@ const Header = () => {
     { name: "Virtual Stylist GPT", href: "https://chatgpt.com/g/g-68122f9753c48191a204f57f491ad2f3-virtual-stylist-gpt" },
     { name: "FAQ", href: "#faq" },
     { name: "Disclaimer", href: "#disclaimer" },
-    { name: "More AI Tools", href: "https://www.aiwebtools.ai" },
+    { name: "More AI Tools", href: "https://aiwebtools.lovable.app/?via=aiwebtools" },
   ];
 
   return (
