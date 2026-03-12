@@ -97,7 +97,7 @@ const Footer = () => {
           </p>
           
           <Button asChild variant="outline" className="rounded-full border-cyberpunk-purple bg-transparent hover:bg-cyberpunk-purple/20 hover:shadow-lg hover:shadow-cyberpunk-purple/25 transition-all duration-300 relative z-10">
-            <a href="https://www.aiwebtools.ai">
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools">
               More AI Tools
             </a>
           </Button>
