@@ -91,7 +91,7 @@ const Footer = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyberpunk-purple/5 via-cyberpunk-blue/5 to-cyberpunk-pink/5 rounded-lg"></div>
           
           <p className="text-sm text-gray-500 mb-4 md:mb-0 relative z-10">
-            <a href="https://www.aiwebtools.ai" className="hover:text-white transition-colors">
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="hover:text-white transition-colors">
               © {currentYear} AI WEB TOOLS LLC. All rights reserved.
             </a>
           </p>
