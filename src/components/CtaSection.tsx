@@ -25,7 +25,7 @@ const CtaSection = () => {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full border-white/20 hover:bg-white/10">
-                <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer">
+                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer">
                   Explore More AI Tools
                 </a>
               </Button>

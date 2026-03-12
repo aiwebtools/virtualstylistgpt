@@ -53,7 +53,7 @@ const Footer = () => {
                 <a href="#disclaimer" className="text-gray-400 hover:text-white hover:bg-white/5 px-2 py-1 rounded transition-all duration-300">Disclaimer</a>
               </li>
               <li>
-                <a href="https://www.aiwebtools.ai" className="text-gray-400 hover:text-white hover:bg-white/5 px-2 py-1 rounded transition-all duration-300">
+                <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="text-gray-400 hover:text-white hover:bg-white/5 px-2 py-1 rounded transition-all duration-300">
                   More AI Tools
                 </a>
               </li>
@@ -91,13 +91,13 @@ const Footer = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyberpunk-purple/5 via-cyberpunk-blue/5 to-cyberpunk-pink/5 rounded-lg"></div>
           
           <p className="text-sm text-gray-500 mb-4 md:mb-0 relative z-10">
-            <a href="https://www.aiwebtools.ai" className="hover:text-white transition-colors">
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" className="hover:text-white transition-colors">
               © {currentYear} AI WEB TOOLS LLC. All rights reserved.
             </a>
           </p>
           
           <Button asChild variant="outline" className="rounded-full border-cyberpunk-purple bg-transparent hover:bg-cyberpunk-purple/20 hover:shadow-lg hover:shadow-cyberpunk-purple/25 transition-all duration-300 relative z-10">
-            <a href="https://www.aiwebtools.ai">
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools">
               More AI Tools
             </a>
           </Button>

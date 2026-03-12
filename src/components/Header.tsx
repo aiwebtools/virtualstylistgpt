@@ -22,7 +22,7 @@ const Header = () => {
     { name: "Virtual Stylist GPT", href: "https://chatgpt.com/g/g-68122f9753c48191a204f57f491ad2f3-virtual-stylist-gpt" },
     { name: "FAQ", href: "#faq" },
     { name: "Disclaimer", href: "#disclaimer" },
-    { name: "More AI Tools", href: "https://www.aiwebtools.ai" },
+    { name: "More AI Tools", href: "https://aiwebtools.lovable.app/?via=aiwebtools" },
   ];
 
   return (
@@ -56,34 +56,39 @@ const Header = () => {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden z-10 p-2 text-gray-300"
+          className="md:hidden z-10 p-2 text-gray-300 active:scale-95 transition-transform"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
           {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center">
-            <nav className="flex flex-col items-center space-y-6">
-              {navItems.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-xl text-gray-300 hover:text-white hover:bg-white/10 px-4 py-2 rounded-md transition-all"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </a>
-              ))}
-              <Button asChild className="bg-cyberpunk-gradient hover:opacity-90 rounded-full mt-4">
-                <a href="https://chatgpt.com/g/g-68122f9753c48191a204f57f491ad2f3-virtual-stylist-gpt" target="_blank" rel="noopener noreferrer">
-                  Try Now
-                </a>
-              </Button>
-            </nav>
-          </div>
-        )}
+        <div 
+          className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-lg flex flex-col items-center justify-center transition-all duration-300 ${
+            mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
+        >
+          <nav className="flex flex-col items-center space-y-6 w-full px-6">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                target={item.href.startsWith('http') ? '_blank' : undefined}
+                rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                className="text-xl text-gray-300 hover:text-white active:text-white hover:bg-white/10 px-4 py-3 rounded-md transition-all w-full max-w-xs text-center"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </a>
+            ))}
+            <Button asChild className="bg-cyberpunk-gradient hover:opacity-90 rounded-full mt-4 w-full max-w-xs">
+              <a href="https://chatgpt.com/g/g-68122f9753c48191a204f57f491ad2f3-virtual-stylist-gpt" target="_blank" rel="noopener noreferrer">
+                Try Now
+              </a>
+            </Button>
+          </nav>
+        </div>
       </div>
     </header>
   );
